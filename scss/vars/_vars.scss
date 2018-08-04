@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+//global 主要字體, 背景色
+$global-font: Carlito, 微軟正黑體, sans-serif !default;
+$global-bg-color: black !default;
+$header-bg-img: "../images/header_bg.png" !default;
+$logo-bg-img: "../images/logo.png" !default;
+$sel-lang-bg-color:#c29b3e !default;
+
+//nav
+$nav-bg-line:"../images/navline.png" !default;
+$nav-bg-line-h:"../images/btn_hover.png" !default;
+$nav-sb:"../images/navline_spc.png" !default;
+$nav-sb-h:"../images/spc_hover.png" !default;
+
+//news
+$news-height: 40px !default;
+$news-bg-img: "../images/news_bg.png" !default;
+$marquee-margin:10px 0px 3px 10px !default;
+$marquee-height: 22px !default;
+$marquee-width: 94% !default;
+$marquee-background: rgba(6,39,84,0.1) url("../images/amplifer3.png") top right no-repeat !default;
+$marquee-li-font: 14px Arial, Helvetica, sans-serif !default;
+$marquee-li-color: #e0e0e0 !default;
+
+//ad
+$ad-img:"../images/ad.png" !default;
+
+//download
+$down-bg-img:"../images/down_bg.png" !default;
+$dl-block-bg-img:"../images/block.png" !default;
+
+//learn
+$learn-bg-color:#121528;
+
+//bank 合作廠商
+$bank-bg-img: "../images/other_bg.png" !default;
+
+/* Placeholder Selector , for @extend */
+/* 清除box的狀態*/
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

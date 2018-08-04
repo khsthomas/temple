@@ -1,0 +1,72 @@
+/* padding */
+.u-pr-0 {
+  padding-right: 0;
+}
+.u-pl-0 {
+  padding-left: 0;
+}
+$paddin-list:((-padding,padding), (-pt,padding-top), (-pr,padding-right), 
+(-pb, padding-bottom), (-pl,padding-left));
+
+@each $padname in $paddin-list {
+  $pname:nth($padname,1);
+  $pval:nth($padname,2);
+  .u#{$pname}#{-4} {
+    #{$pval}: 4px !important; 
+  }
+  @for $i from 1 through 6 {
+    .u#{$pname}-#{$i*8} {
+      #{$pval}: #{($i*8)}px !important; 
+    }
+  }
+}
+
+/* margin */
+.u-mr-0 {
+  margin-right: 0;
+}
+.u-ml-0 {
+  margin-left: 0;
+}
+$margin-list:((-margin,margin), (-mt,margin-top), (-mr,margin-right), 
+(-mb, margin-bottom), (-ml,margin-left));
+
+@each $marname in $margin-list {
+  $pname:nth($marname,1);
+  $pval:nth($marname,2);
+  .u#{$pname}#{-4} {
+    #{$pval}: 4px !important; 
+  }
+  @for $i from 1 through 6 {
+    .u#{$pname}-#{$i*8} {
+      #{$pval}: #{($i*8)}px !important; 
+    }
+  }
+}
+
+/* text */
+.u-text-center {
+  text-align: center !important; }
+
+.u-text-right {
+  text-align: right !important; }
+
+/* float */
+.u-pull-left {
+  float: left !important; }
+
+.u-push-right {
+  float: right !important; }
+
+/* hide & show */
+.u-hidden {
+  display: none !important; }
+
+.u-show {
+  display: block !important; }
+
+/* center block */
+.u-center-block {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important; }

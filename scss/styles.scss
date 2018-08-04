@@ -1,0 +1,21 @@
+@charset "utf-8";
+//在nodejs下編譯, 要使用compass mixins
+
+//@import "D:/projects/ushow-scss-project/compass-mixins/lib/compass";
+//@import "compass";
+@import "node_modules/compass-sass-mixins/lib/compass";
+@import 'vars/vars';
+@import 'vars/color';
+
+@import 'base';
+
+//在nodejs下編譯, 要使用compass mixins
+@import "partials/reset";
+
+@import 'partials/utility';
+@import 'partials/colors';
+@import 'partials/style';
+@import 'partials/nav';
+@import 'partials/jquery.marquee';
+
+@import 'partials/media';

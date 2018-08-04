@@ -1,0 +1,53 @@
+@charset "UTF-8";
+@import '../vars/color';
+/* $navbar _style.scss*/
+.navbar {
+  height: 50px;
+  /*1st layer .ul_nav .li_nav*/
+  ul {
+    list-style: none;
+
+    li {
+      list-style: none;
+      padding: 0 10px;
+      display: inline-block;
+      
+      position: relative;
+      float: left;
+
+       /* 複寫 bootstrap 顏色 */
+      & .dropdown-menu{
+        background-color:  $color_light_black_70;
+        &>li>a{
+          color: $color_white;
+          &:hover, &:focus{
+            background-color: $color_brown;
+          }
+        }
+      }
+      a {
+        display: inline-block;
+        line-height: 1.4;
+        text-decoration: none;
+        padding: 13px 18px 12px;
+        transition: color 0.5s ease-in, border-bottom 0.5s 0.2s;
+
+        &:hover {
+          color: $color_main;
+          border-bottom: 2px solid $color_main;
+        }
+
+        &:active {
+          color: $color_second;
+          border-bottom: 2px solid $color_second;
+        }
+      }
+    }
+  }
+}
+
+.nav_now {
+  color: $color_third !important;
+}
+
+
