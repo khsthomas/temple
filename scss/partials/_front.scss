@@ -1,0 +1,38 @@
+@import '../vars/vars';
+@import "../vars/color";
+/*latest module*/
+.color_dark_grey:hover{
+    text-decoration: none;
+    color: $color_dark_grey;
+    text-align: left;
+}
+.more-link{
+    color: $color_blue;
+}
+.more-link:hover{
+    color: $color_blue;
+}
+.more-link-br1{
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+}
+.valign-cust {
+    display: inline-block;
+    vertical-align: bottom !important;
+    align-items: baseline !important;
+    float: none;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+/*3-cols*/
+.rm-icon{
+    width: 20%;
+    position: absolute;
+    bottom: 1px;
+    margin-left: -10%;
+}
+.moduletable{
+    background-color: $color_main;
+    color: $color_dark_grey;
+}

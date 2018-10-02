@@ -9,7 +9,9 @@ $color_light_black: #111111;
 $color_light_black_70: rgba(17, 17, 17, 0.7);
 $color_black: #000000;
 $color_light_grey: #c0c0c0;
+
 $color_dark_grey: #535353;
+$color_dark_grey2: #4A4A4A;
 $color_light_brown: #68473e;
 $color_brown: #392722;
 $color_white: #ffffff;
@@ -58,6 +60,9 @@ html, body {
 
 .bg_color_dark_grey {
   background-color: $color_dark_grey;
+}
+.bg_color_dark_grey2 {
+  background-color: $color_dark_grey2;
 }
 
 .bg_color_brown {

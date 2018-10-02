@@ -5,18 +5,21 @@
 .u-pl-0 {
   padding-left: 0;
 }
-$paddin-list:((-padding,padding), (-pt,padding-top), (-pr,padding-right), 
-(-pb, padding-bottom), (-pl,padding-left));
+$paddin-list:((padding,padding), (pt,padding-top), (pr,padding-right), 
+(pb, padding-bottom), (pl,padding-left));
 
 @each $padname in $paddin-list {
   $pname:nth($padname,1);
   $pval:nth($padname,2);
-  .u#{$pname}#{-4} {
+  .u-#{$pname}#{-4} {
     #{$pval}: 4px !important; 
   }
   @for $i from 1 through 6 {
-    .u#{$pname}-#{$i*8} {
+    .u-#{$pname}-#{$i*8} {
       #{$pval}: #{($i*8)}px !important; 
+    }
+    .#{$pname}-#{$i}r{
+      #{$pval}: #{$i}rem !important;
     }
   }
 }

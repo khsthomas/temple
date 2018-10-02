@@ -59,42 +59,42 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-  font-family: "Arial", "Microsoft JhengHei", sans-serif;
+  font-family: PingFangTC-Regular, "Arial", "Microsoft JhengHei", sans-serif;
   font-size: 28px;
   font-weight: 600;
   line-height: 1.8;
 }
 
 h2 {
-  font-family: "Arial", "Microsoft JhengHei", sans-serif;
+  font-family: PingFangTC-Regular, "Arial", "Microsoft JhengHei", sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 1.6;
 }
 
 h3 {
-  font-family: "Arial", "Microsoft JhengHei", sans-serif;
+  font-family: PingFangTC-Regular, "Arial", "Microsoft JhengHei", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.4;
 }
 
 h4 {
-  font-family: "Arial", "Microsoft JhengHei", sans-serif;
+  font-family: PingFangTC-Regular, "Arial", "Microsoft JhengHei", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.4;
 }
 
 h5 {
-  font-family: "Arial", "Microsoft JhengHei", sans-serif;
+  font-family: PingFangTC-Regular, "Arial", "Microsoft JhengHei", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.4;
 }
 
 h6 {
-  font-family: "Arial", "Microsoft JhengHei", sans-serif;
+  font-family: PingFangTC-Regular, "Arial", "Microsoft JhengHei", sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
@@ -109,15 +109,15 @@ p {
 /* $input */
 
 input {
-  border: 1px solid $color_dark_grey;
+  border: 1px solid $color_dark_grey2;
   font-size: 14px;
   line-height: 1.2;
   font-weight: 500;
   outline: none;
   margin: 6px 0px;
   padding: 3px 4px;
-  background-color: $color_dark_grey;
-  color: $color_white;
+  color: $color_dark_grey;
+  background-color: $color_white;
 
   &:focus {
     box-shadow: 0 0 3px $color_main;
@@ -138,7 +138,7 @@ input[type='email']:invalid + .help_text::before {
 }
 
 label {
-  color: $color_white;
+  color: $color_dark_grey;
 }
 
 /* Help text */
@@ -157,16 +157,16 @@ label {
 }*/
 a {
   text-decoration: none;
-  color: $color_white;
+  color: $color_dark_grey;
   text-align: center;
 }
 a:hover, a:focus {
-  color: $color_white;
+  color: $color_dark_grey;
   text-decoration: none;
 }
 button {
   border: none;
-  color: $color_white;
+  color: $color_dark_grey;
 }
 
 .button {
@@ -220,7 +220,7 @@ button {
   padding: 0px 2px;
   text-align: center;
   font-size: 14px;
-  font-family: "Arial", "Microsoft JhengHei", sans-serif;
+  font-family: PingFangTC-Regular, "Arial", "Microsoft JhengHei", sans-serif;
   cursor: pointer;
 }
 
@@ -451,7 +451,7 @@ button {
     top: 25%;
   }
 }
-
+/*
 .chat_bg {
   background-image: url(images/chat_bg.png);
   background-size: cover;
@@ -488,7 +488,22 @@ button {
   background-image: url(images/question_bg.png);
   background-size: cover;
 }
+*/
+/* bootstrap overide */
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+.thumbnail.right-caption > img {
+  float: left;
+  margin-right: 9px;
+}
 
-footer {
-  height: 36px;
+.thumbnail.right-caption {
+  float: left;
+}
+
+.thumbnail.right-caption > .caption {
+  padding: 4px;
 }

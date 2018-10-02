@@ -17,11 +17,14 @@
 
        /* 複寫 bootstrap 顏色 */
       & .dropdown-menu{
-        background-color:  $color_light_black_70;
+        background-color:  $color_light_grey2;
+        &>li{
+          background-color: $color_light_grey2;
+        }
         &>li>a{
-          color: $color_white;
+          color: $color_dark_grey2;
           &:hover, &:focus{
-            background-color: $color_brown;
+            background-color: $color_light_grey2;
           }
         }
       }
@@ -29,17 +32,17 @@
         display: inline-block;
         line-height: 1.4;
         text-decoration: none;
-        padding: 13px 18px 12px;
+        padding: 6px 6px 6px;
         transition: color 0.5s ease-in, border-bottom 0.5s 0.2s;
-
+        color: $color_dark_grey2;
         &:hover {
-          color: $color_main;
-          border-bottom: 2px solid $color_main;
+          color: $color_brown;
+          border-bottom: 2px solid $color_brown;
         }
 
         &:active {
-          color: $color_second;
-          border-bottom: 2px solid $color_second;
+          color: $color_dark_grey2;
+          border-bottom: 2px solid $color_light_grey2;
         }
       }
     }
@@ -47,7 +50,8 @@
 }
 
 .nav_now {
-  color: $color_third !important;
+  /*color: $color_third !important;*/
+  background-color:  $color_light_grey2 !important;
 }
 
 

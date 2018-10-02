@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head xmlns:th="http://www.thymeleaf.org"   
-  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-  xmlns:jawr="http://jawr.java.net">
+  <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -34,10 +32,37 @@
                 <div class="bigCircle"></div>
         </div> 
     <div id="page-wrapper">
-      <!--註冊登入-->
-      <div id="top-bar" class="row bg_color_black"><div class="container">
+      <!--top logo menu-->
+      <div id="top-bar" class="row bg_color_white"><div class="container">
           <!--登入前 class="row bg_color_black"-->
-          <div>
+          <div class="row">
+              <div class="col-4 u-pl-0">
+                <div class="logo"></div>
+              </div>
+              <div class="col-8">
+              <nav th:if="${player==null}" class="navbar row bg_color_white color_black_grey2 u-mt-24">
+                <ul class="ul_nav">
+                    <li class="li_nav">
+                        <a href="#">首頁</a></li>
+                    <li class="li_nav">
+                        <a class="nav_now dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                            全真上人</a>
+                        <ul class="dropdown-menu"  role="menu">
+                            <li><a href="javascript:void(0)">全真上人德相</a></li>
+                            <li><a href="javascript:void(0)">全真上人略傳</a></li>
+                            <li><a href="javascript:void(0)">偈語選粹</a></li>
+                        </ul>
+                    </li>
+                    <li class="li_nav">
+                        <a href="#">玄空法寺</a></li>
+                    <li class="li_nav">
+                        <a href="#">最新活動</a></li>
+                    <li class="li_nav">
+                        <a href="#">聯絡我們</a></li>
+                </ul>
+                </nav>
+              </div>
+              <!--
               <div class="col-6 offset-6">
                   <div class="row">
                       <div class="col-4 offset-2 top_header_padding">
@@ -50,99 +75,14 @@
                           <a href="#" class="button btn_logIn">登入</a>
                       </div> 
                   </div>    
-              </div>    
+              </div>  
+              -->  
           </div>
          
       </div></div>
       <div id="content"><div class="container">
-        <header layout:fragment="header">
-            <div class="row">
-                <div class="col-6">
-                    <!-- logo -->
-                </div>
-                <div class="col-6 u-pr-0">
-                    <div class="row u-mt-16">
-                       
-                        <div class="col-12">
-                            <div class="row ">
-                                <div class="col-2 offset-7">
-                                    <a href="#" class="button btn_signUp header_center">註冊</a>
-                                </div>
-                                <div class="col-3">
-                                    <select class="select_lan bg_color_black color_white header_center">
-                                        <option>繁體中文</option>
-                                        <option>English</option>
-                                        <option>簡體中文</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <!--marquee-->
-                        <div class="col-12 u-mt-16 bg_color_light_black color_white">
-                            <div class="row">
-                                <div class="col-3 news">
-                                    <h5>最新消息:</h5>
-                                </div>
-                                <div class="col slideText">
-                                    <!--
-                                        <ul id="marquee" class="marquee">
-                                                <li><span style="color:yellow;">00000000000000000000</span></li>
-                                                <li>1111111111111111111</li>
-                                                <li><span style="color:red;">222222222222222222222</span></li>
-                                                <li><span style="color:#2aff2d;">3333333333333333333333</span></li>
-                                            </ul>
-                                    -->
-                                    <ul id="marquee" class="marquee">
-                                        <li><a href="#">【系統公告】超商ATM儲值</a></li>
-                                        <li><a href="#">【系統公告】情助飛有社的來他</a></li>
-                                        <li><a href="#">【系統維護公告】</a></li>
-                                    </ul>
-                                </div>
-                            </div>       
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </header>
-        <!--nav-->
-        <!-- IF CUSTOMER IS Not Login -->
-        <nav th:if="${player==null}" class="navbar row bg_color_light_black_70 color_white">
-            <ul class="ul_nav">
-                <li class="li_nav">
-                    <a href="#">首頁</a></li>
-                <li class="li_nav">
-                    <a class="nav_now dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                        遊戲大廳</a>
-                    <ul class="dropdown-menu"  role="menu">
-                        <li><a href="javascript:void(0)">Transaction History</a></li>
-                        <li><a href="javascript:void(0)">Game Stat History</a></li>
-                        <li><a href="javascript:void(0)">Game History</a></li>
-                    </ul>
-                </li>
-                <li class="li_nav">
-                    <a href="#">優惠活動</a></li>
-                <li class="li_nav">
-                    <a href="#">合作計畫</a></li>
-                <li class="li_nav">
-                    <a href="#">常見問題</a></li>
-                <li class="li_nav">
-                    <a href="#">聯絡我們</a></li>
-            </ul>
-        </nav>
-        <nav th:unless="${player!=null}" class="navbar row bg_color_light_black_70 color_white">
-            <ul class="ul_nav">
-                <li>
-                    <a href="#">首頁</a></li><li>
-                    <a href="#">會員專區</a></li><li>
-                    <a href="#">紀錄查詢</a></li><li>
-                    <a href="#">遊戲大廳</a></li><li>
-                    <a href="#">聊天室</a></li><li>
-                    <a href="#">優惠活動</a></li><li>
-                    <a class="nav_now" href="#">常見問題</a></li><li>
-                    <a href="#">聯絡我們</a></li>
-            </ul>
-        </nav>
+       
+        <header>
         <div id="adCarousel" class="carousel" data-ride="carousel">
             <!-- Indicators -->
           <ol class="carousel-indicators">
@@ -153,15 +93,7 @@
             <!-- Wrapper for slides -->
           <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="resources/img/slider/fullimage1.jpg" alt="Los Angeles">
-                </div>
-            
-                <div class="carousel-item">
-                  <img src="resources/img/slider/fullimage2.jpg" alt="GTA5">
-                </div>
-            
-                <div class="carousel-item">
-                  <img src="resources/img/slider/fullimage3.jpg" alt="New York">
+                  <img src="resources/img/slider/fullimage1.png" alt="Gate">
                 </div>
           </div>
           <!-- Left and right controls -->
@@ -176,59 +108,199 @@
             </a>
           
         </div>
-        <div class="row">
-            <section class="col-4 section_news">
-                <h4 class="text_gradient">最新公告</h4>
-            </section>
-            <section class="col-4">
-            </section>
-            <section class="col-4">
+    </header>
 
-            </section>
-           
-        </div>
-        <div class="row">
-            <section class="col-4 section_news">
-                <h4 class="text_gradient">最新公告</h4>
-                <a href="#">
-                    <p class="color_white"><span class="color_main">【系統公告】</span>家師選慢全三只李千較多決……就以現孩府一共持小，組子會坡朋非更母山我心、</p>
+
+        <!-- mercy space skregion -->
+        <div class="row bg_color_main_70 u-pt-32 u-pb-32 u-pl-40 u-pr-40">
+               
+            <section class="col-md-4">
+              <div class="thumbnail bg_color_white" style="height: 100%;">
+                <a  href="{cat_link1}">
+                  <img src="images/front/jy-mercy.png" alt="Mercy" style="width:100%">
+                  <div class="caption text-center">
+                      <h3 class="my-2">朝陽慈善</h3>
+                    <p class="text-left px-3 pb-5r">朝陽慈善朝陽慈善朝陽慈善朝陽慈善Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                    <img class="rm-icon my-2" src="images/front/read_more.png"/>
+                  </div>
                 </a>
-                <a href="#">
-                    <p class="color_white u-mt-8"><span class="color_main">【系統公告】</span>館物自的一不子保夫人作賽不值，生心或、動花童望！步存照個同業學一好。著務目不全息高家進城畫上為許頭地舞子可人英因</p>
+              </div>
+            </section>
+            
+            <section class=" col-md-4">
+              <div class="thumbnail bg_color_white" style="height: 100%;">
+                <a href="{cat_link2}">
+                  <img src="images/front/jy-space.png" alt="Space" style="width:100%">
+                  <div class="caption text-center">
+                        <h3 class="my-2">朝陽慈空</h3>
+                    <p class="text-left px-3 pb-5r">Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                    <img class="rm-icon my-2" src="images/front/read_more.png"/>
+                  </div>
                 </a>
+              </div>
             </section>
-            <section class="col-4">
-                <h4 class="text_gradient">優惠活動</h4>
-                <div class="row">
-                    <div class="col-12 bg_color_light_grey ad_height u-mb-4">
-                        
-                    </div>
-                    <div class="col-12 bg_color_light_grey ad_height u-mb-4">
 
-                    </div>
-                    <div class="col-12 bg_color_light_grey ad_height u-mb-4">
+            <section class="col-md-4">
+              <div class="thumbnail text-center bg_color_white" style="height: 100%;">
+                <a href="{cat_link3}">
+                  <img src="images/front/jy-rigion.png" alt="Region" style="width:100%">
+                  <div class="caption text-center">
+                        <h3 class="my-2">玄空法界</h3>
+                    <p class="text-left px-3 pb-5r">玄空法界玄空法界玄空法界玄空法界玄空法界玄空法界玄空法界玄空法界玄空
+                        法界玄空法界玄空法界玄空法界玄空法界玄空法界玄空法界玄空法界玄空法界玄空法界
+                        Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                        <img class="rm-icon my-2" src="images/front/read_more.png"/>
+                  </div>
+                </a>
+                <!-- <img class="rm-icon" src="images/front/read_more.png" style="margin-bottom: -3rem;"/> -->
+              </div>
+            </section>
 
+          </div>
+
+          <div class="row bg_color_white u-pt-32 u-pb-32 u-pl-40 u-pr-40">
+               
+                <section class="col-md-5 pr-0">
+                  <div class="thumbnail bg_color_white" style="height: 100%;">
+                    <a  href="images/front/jy-mercy.png" target="_blank">
+                      <img src="images/front/wyphoto.png" alt="Wisdom Young" style="width:100%">
+                    </a>
+                  </div>
+                </section>
+                
+                <section class=" col-md-7">
+                  <div class="row no-gutters">
+                      <div class="col-2">
+                          <img src="images/front/wyimg.png" style="width:88%;">
+                      </div>
+                      <div class="col-4">
+                            <img src="images/front/wyword.png" style="width:88%;padding-top:1.2rem;">
+                      </div>
+                      <div class="col-2">
+                            <img src="images/front/indep-comm.png" style="width:100%;padding-top:.2rem;">
+                        </div>
+                        <div class="col-4">
+                               <h3 class="pt-2"> 中立農工</h3><h3 class="py-0">商政委員會</h3>
+                               
+                        </div>
+                  </div>
+                  <div class="row">
+                      <div class="col">
+                            <p class="pr-4 py-2" style="font-size: .9rem;">玄空法寺 全真上人，非常重視品格教育，品性是否能夠健全，
+                                    對於每個人都是ㄧ生的課題；如何成為一個受歡迎、眾人愛戴、
+                                    處世圓融的人，都是可以透過修行來學習進而改變的。</p>
+                      </div>
+                  </div>
+                  <div class="row">
+                        <div class="col-1">
+                            <a href="images/front/fb.png">
+                                <img src="images/front/fb.png" >
+                            </a>
+                        </div> 
+                        <div class="align-middle ml-5 mr-2 mt-4">
+                                <a href="images/front/fb.png">
+                                <small class="small">智青FB粉專</small>
+                                </a>
+                        </div>
+                        <div class="col-1">
+                                <a href="images/front/fb.png">
+                                <img class="mt-1" src="images/front/signup.png" >
+                                </a>
+                        </div>
+                        <div class="align-middle u-ml-40 mt-4">
+                                <a href="images/front/fb.png">
+                                <small class="small">立即線上報名</small>
+                                </a>
+                        </div>
                     </div>
+                </section>
+    
+              </div>
+
+              <div class="row bg_color_main py-0 u-pl-40 u-pr-40">
+                    <section class="col-md-5">
+                        <div class="row">
+                            <img src="images/front/skguard.png" style="width:80%;"/>
+                        </div>
+                        <ul class="small">
+                            <li class="py-1">一、每個月第二週週六</li>
+                            <li class="py-1"> 二、萬緣傳佛法燈聖會第八會</li>
+                            <li class="py-1"> 三、觀世音菩薩聖誕暨圓燈法會</li>
+                            <li class="py-1"> 四、春季祈安法會</li>
+                            <li class="py-1">五、浴佛節法會</li>
+                            <li class="py-1">六、伽藍菩薩聖誕</li>
+                            <li class="py-1">七、孝道月地藏超薦報恩大法會</li>
+                            <li class="py-1"> 八、秋季梁皇法會</li>
+                        </ul>
+                        <div class="row">
+                                <a class="h5  more-link more-link-br1" href="{cat_link1}">
+                                        更多消息>
+                                </a>
+                        </div>
+                    </section>
+                    
+                    <section class="col-md-7">
+                            <img src="images/front/golden-sun.png" style="width:100%">
+                            
+                    </section>
+              </div>
+
+              <div class="row bg_color_white u-pt-24 u-pb-32 u-pl-40 u-pr-40">
+                
+                <section class="col-12">
+<div class="row">
+
+    <div class="col pl-3">
+    <h2>
+        <span style="
+            position: absolute;
+            bottom: .6rem !important;
+            ">玄空專車</span>
+        <a href="{link}">
+        <img style="height:38px; padding-left:6.2rem;" src="images/front/fb-s.png" >
+        </a>
+    </h2>
+    
+    </div>
+</div>
+<div class="row">
+    <section class="col-5">
+            <h4><small class="small">
+            【植福修慧課程】： 如來聖境導讀、法師禪語甘露、消災延壽藥師法會、佛學分享與研討、靜坐禪修、信願行植福、開心農場體驗之旅、般若禪墨、文物館藝術饗宴、居士妙境語珠……等等。
+            </small></h4>
+    </section>
+    <div class="col-1"></div>
+    <section class="col-5">
+            <h4><small class="small">
+                107年發車日期：
+            1/13～1/14、2/10～2/11、3/10～3/11、4/14～4/15、5/12～5/13、
+            6/09～6/10、7/14～7/15、8/11～8/12、
+            9/08～9/09、10/13～10/14、11/10～11/11、12/08～12/09
+            </small></h4>
+            <h4><small class="small">
+            ★報名專線：法恩師父0933-722247
+        </small></h4>
+    </section>
+    <div class="col-1"></div>
+</div>
+                </section>
+                
                 </div>
-            </section>
-            <section class="col-4">
-                <h4 class="text_gradient">使用說明</h4>
-                <div>
-                    <p class="color_white">仍是是動家師選慢全三只李千較多決……<br>
-                        就以現孩府一共持小，組子<br>
-                        會坡朋非更母山我心、險子才司<br>
-                        館物自的一不子保夫人作賽不值，生心或、<br>
-                        動花童望！步存照個同業學一好。<br>
-                        著務目不全息高家進城畫上為許頭<br>
-                        地舞子可人英因
-                    </p>
-                </div>
-            </section>
-        </div>
+
 
       </div></div>
-      <div layout:fragment="footer" id="bottom-bar" class="bg_color_light_brown">
-      </div>
+      <footer id="bottom-bar" class="bg_color_light_brown2">
+          <div class="row info-contact">
+              <div class="col-8 u-pl-16">
+                <div class="u-mt-8" >© 大智山玄空法寺. 台南巿楠西區中華路270號. 電話：06-5751455 傳真：06-5755935 </div>
+                <div class="u-mt-8" >© 朝陽慈善功德會. 台南巿佳里區長安街78之2號4樓之3. 電話：06-7229290 傳真：06-7212222</div>
+              </div>
+              <div class="col-4">
+<img src="resources/img/facebook_trans.png" class="u-ml-8">
+<img src="resources/img/line_trans.png" class="u-ml-8">
+              </div>
+         </div>
+      </footer>
     </div>
     <!--=================================================================================-->
     

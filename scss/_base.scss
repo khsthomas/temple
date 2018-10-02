@@ -2,6 +2,10 @@
 * 網頁主框架
 **/
 @charset "utf-8";
+@import 'vars/vars';
+@import 'vars/color';
+
+$pageWidth: 960px;
 /*for semantic elems*/
 header, section, footer, aside, nav, main, article, figure {
   display: block; 
@@ -10,10 +14,10 @@ header, section, footer, aside, nav, main, article, figure {
 html, body {
   width: 100%;
   height: 100%;
-  font-family: "Arial", "Microsoft JhengHei", sans-serif;
+  font-family: PingFangTC-Regular, "Arial", "Microsoft JhengHei", sans-serif;
 
   .container {
-    width: 960px;
+    width: $pageWidth;
   }
 }
 /*
@@ -32,7 +36,7 @@ aside[role="complementary"] {
 
 body {
   background   : url(images/bg.png),
-  linear-gradient(to bottom, rgb(10, 5, 2),  rgb(10, 1, 1));
+  linear-gradient(to bottom, rgb(250, 249, 247),  rgb(250, 249, 247));
   
   background-repeat  : no-repeat,
   no-repeat;
@@ -66,15 +70,37 @@ body {
   @include width100-margin0();
 }
 #top-bar{
-  height:37px;
+  height:83px;
   flex-shrink: 0;
   @include width100-margin0();
+
+  .logo{
+    margin-top: 10px;
+    width:100%;
+    height: 66px;
+    background   : url(images/logo.png);
+    background-repeat  : no-repeat;
+    background-size: 100%;
+  }
 }
 #bottom-bar {
-  height: 36px;
+  height: 100px;
   flex-shrink: 0;
   @include width100-margin0();
+
+  font-family: PingFangTC-Regular;
+  font-size: 14px;
+  color: #CCCCCC;
+  text-align: left;
+  .info-contact{
+    position: relative;
+    width: $pageWidth;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+  }
 }
+
 /*override for bootstrap*/
 .container{
   padding-left: 0;

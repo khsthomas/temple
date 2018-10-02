@@ -7,11 +7,11 @@ sourcemaps = require('gulp-sourcemaps'),
     concat = require('gulp-concat');
 
 // Paths
-var pubPath='../src/main/webapp/resources/';
+var pubPath='../htdocs/joomla3811/templates/bootstrap4/';
 var paths = {
     'public': {  
         css:pubPath+'css/',
-        img:pubPath+'img/',
+        img:pubPath+'images/',
         js:pubPath+'js/'
     },
     'scss': './scss/',
@@ -26,10 +26,10 @@ var paths = {
 gulp.task('styles', function () {
     gulp.src(paths.scss+'styles.scss')
     .pipe(sourcemaps.init())
-        .pipe(gulpSguass())
+        .pipe(gulpSass())
     .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.css))
-        //.pipe(gulp.dest(paths.public.css))
+        .pipe(gulp.dest(paths.public.css))
         ;
 });
 gulp.task('styles-compress', function () {

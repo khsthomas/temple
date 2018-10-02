@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+            <script src="dash.all.debug.js"></script>
+            <!--https://cdn.dashjs.org/latest/dash.all.min.js-->
+            <style>
+                video {
+                   width: 640px;
+                   height: 360px;
+                }
+            </style>
+    </head>
+    <body>
+            <video id="videoPlayer" ></video>
+    </body>
+    <script>
+            (function(){
+               var url = "https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd";
+               //var url = "http://nttca-portal.pd.ntt.hk/vstream1/9d6501c8-7e09-41ad-9d57-45ef35f53961/manifest.mpd";
+               //var media=dashjs.MediaPlayer();
+               //console.log(dashjs);
+                var player = dashjs.MediaPlayer().create();
+                console.log(player.getManifestDateHeaderTimeSource());
+                //player.enableManifestDateHeaderTimeSource(true);
+                player.initialize(document.querySelector("#videoPlayer"), url, true);
+                player.on('error', function(e) {
+                        if (e.error === 'download') {
+                            // dash.js gave up loading something
+                            // e.event.id will tell you what it failed to load (mpd, segment...)
+                            // and e.event.url will have the URL that failed
+                        }
+                    });
+            })();
+    </script>
+</html>
