@@ -1,0 +1,40 @@
+@import '../vars/vars';
+@import '../vars/color';
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+  .thumbnail.right-caption > img {
+    float: left;
+    margin-right: 9px;
+  }
+  
+  .thumbnail.right-caption {
+    float: left;
+  }
+  
+  .thumbnail.right-caption > .caption {
+    padding: 4px;
+  }
+.breadcrumb{
+    /* background-color: #e9ecef; */
+    background-color: $color_white;
+    margin-bottom: 0 !important;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    /*display: inline-block;
+    padding-right: .5rem;
+    color: #6c757d;*/
+    content: ">";
+}
+.bc-nav-container {
+    position:relative;
+    padding-left: 2rem;
+  button {
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+  }
+}

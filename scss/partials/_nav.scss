@@ -37,21 +37,31 @@
         color: $color_dark_grey2;
         &:hover {
           color: $color_brown;
-          border-bottom: 2px solid $color_brown;
+          // border-bottom: 2px solid $color_brown;
         }
 
         &:active {
           color: $color_dark_grey2;
-          border-bottom: 2px solid $color_light_grey2;
+          // border-bottom: 2px solid $color_light_grey2;
         }
       }
     }
   }
 }
-
+.dropdown-item.active, .dropdown-item:active {
+  color: $color_dark_grey2;
+  text-decoration: none;
+  background-color: $color_light_grey3 !important;
+}
 .nav_now {
   /*color: $color_third !important;*/
   background-color:  $color_light_grey2 !important;
 }
-
-
+/* hover dropdown */
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
