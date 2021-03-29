@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  temple:
+    image: temple
+    build:
+      context: .
+      dockerfile: ./Dockerfile

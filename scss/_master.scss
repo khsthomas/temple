@@ -1,0 +1,156 @@
+/**
+* 上人專頁
+**/
+@charset "utf-8";
+@import 'vars/vars';
+@import 'vars/color';
+$pageWidth: 960px;
+@mixin width100-margin0(){
+  width: 100%;
+  margin: 0;
+}
+/*for semantic elems*/
+header, section, footer, aside, nav, main, article, figure {
+  display: block; 
+}
+/*原來自 _style.scss*/
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: PingFangTC-Regular, "Arial", "Microsoft JhengHei", sans-serif;
+  .container {
+    width: $pageWidth;
+  }
+}
+body {
+    background   : url(images/master/background-min.png);
+    background-repeat  : repeat;
+    background-position:top;
+    background-attachment: fixed;
+    background-size: 40% 50%;
+  }
+
+/*定義flex box: top content bottom*/
+#page-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: $pageWidth;
+  /*height: 100%;*/
+  min-height:100vh;
+  padding:0;
+  flex-direction:column;
+  display: flex;
+}
+.intro-container {
+  //width: $pageWidth;
+  min-height:112vh; //960 x 1029px;
+  background   : url(images/master/master960c.png);
+  background-size: auto 100%;
+  background-repeat  :no-repeat;
+  background-position-x: center;
+  .menu-content {
+    width: 50%;
+    // @include width100-margin0();
+    //834/1029*112
+    margin-top: 90vh !important;  
+  }
+}
+.menu-content {
+  //width: $pageWidth;
+  height: 100%;
+  flex: 1 0 auto;
+  //margin: 0;
+  margin: auto;  
+  & .border-bottom{
+    //border-bottom: #888888 2px solid;
+    width: 72%;
+    position: absolute;  
+    padding-bottom: 8px;
+    padding-top: 2px;
+    font-size: 1em;
+    letter-spacing: 2px;
+  }
+  & a.border-bottom{
+    text-align: left;
+    
+  }
+  & .col:hover, & .col.active {
+    background: url('images/master/item-bg3.png') 50% 50%;
+    background-size: cover;
+  }
+  & .col:hover{
+    font-weight: bold;
+  }
+}
+.item-icon{
+  &::before {
+    background: url('images/master/item.png') 50% 50%;
+    background-size: cover;
+    height: 1.6em;//24px;
+    width: 1.6em;
+    display: inline-block;
+    /* Other styles here */
+    margin-right: 10px;
+    content: "";
+  }
+  
+}
+
+#top-bar{
+  height:285px;
+  flex-shrink: 0;
+  @include width100-margin0();
+  background   : url(images/master/menu2.png) 100% 30%;
+  background-repeat  : no-repeat;
+  background-size: 100% 100%;
+  padding: 92px 26px 6px 38px;
+}
+#bottom-bar {
+  height: 100px;
+  flex-shrink: 0;
+  @include width100-margin0();
+
+  font-family: PingFangTC-Regular;
+  font-size: 14px;
+  background-color: $color_light_brown2;
+  color: #CCCCCC;
+  text-align: left;
+  .info-contact{
+    position: relative;
+    width: $pageWidth;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+  }
+}
+
+/*override for bootstrap*/
+.container{
+  padding-left: 0;
+  padding-right: 0;
+}
+nav, .row{
+  margin-left: 0;
+  margin-right: 0;
+}
+.ajax-loading{
+  &:after {
+    content: "Loading";
+    color: $color_main;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(25%, -50%);
+    margin: auto;
+    animation: h5 3s cubic-bezier(0.56, 0.23, 0.58, 1) infinite;
+  }
+  position:absolute;
+  top:50%;
+  left:48%;
+  transform: translate(-50%, -50%);
+  /*padding:2px;*/
+  display:none;
+  z-index:999;
+}

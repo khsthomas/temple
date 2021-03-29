@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/styles-master.css?v=27" />
+        
+       <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+    <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="//use.fontawesome.com/5c7468c27f.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
+      <script src="resources/js/myWebSocket.js" th:src="@{/resources/js/myWebSocket.js}"></script>
+      <script src="resources/js/jquery.marquee.js" th:src="@{/resources/js/jquery.marquee.js}"></script>
+  </head>
+  <body>
+        <div class="ajax-loading">
+                <div class="smallCircle"></div>
+                <div class="bigCircle"></div>
+        </div> 
+        <div id="page-wrapper">
+            <!--top logo menu id="top-bar"-->
+            <div  class="container">
+                <div id="top-bar">
+                    <div class="menu-content">
+                        <div class="row">
+                            <div class="col active"><i class="item-icon"></i><a href="#" class="border-bottom">全真上人德相</a></div>
+                            <div class="col"><i class="item-icon"></i><a class="border-bottom"> Login</a></div>
+                            <div class="col"><i class="item-icon"></i><a class="border-bottom"> Login</a></div>
+                        </div>
+                        <div class="row u-pt-24">
+                            <div class="col"><i class="item-icon"></i><a class="border-bottom">test</a></div>
+                            <div class="col"><i class="item-icon"></i><a class="border-bottom"> Login</a></div>
+                            <div class="col"><i class="item-icon"></i><a class="border-bottom"> Login</a></div>
+                        </div>
+                        <div class="row u-pt-24">
+                            <div class="col"><i class="item-icon"></i><a class="border-bottom">test</a></div>
+                            <div class="col"><i class="item-icon"></i><a class="border-bottom"> Login</a></div>
+                            <div class="col"><i class="item-icon"></i><a class="border-bottom"> Login</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content" class="content"><div class="container">
+             
+              
+          <nav aria-label="breadcrumb" class="bc-nav-container">
+                <button type="button" id="sidebarCollapse" class="btn btn-default">
+                        <i class="fas fa-align-left"></i>
+                        
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" 
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                <ol class="breadcrumb">
+                        
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Library</li>
+                </ol>
+              </nav>
+<div class="wrapper">
+       
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        
+
+        <ul class="list-unstyled components">
+
+            <li><!-- class="active"-->
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">Home 1</a>
+                    </li>
+                    <li>
+                        <a href="#homeSubmenu-22" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home 2</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu-22">
+                            <li>
+                                <a href="#">Home 2-1</a>
+                            </li>
+                            <li>
+                                <a href="#">Home 2-2</a>
+                            </li>
+                            <li>
+                                <a href="#">Home 2-3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Home 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+
+        <!-- <ul class="list-unstyled CTAs">
+            <li>
+                <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+            </li>
+            <li>
+                <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+            </li>
+        </ul> -->
+    </nav>
+
+    <!-- Page Content Holder -->
+    
+    <div class="row">
+        <div class="col">
+ 
+        <h2>Collapsible Sidebar Using Bootstrap 4</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <div class="line"></div>
+        <div class="row">
+            <div class="col-3">col-3</div><div class="col-9">col-9</div>
+        </div>
+        <div class="row">
+            <div class="col-3">col-3</div><div class="col-9">col-9</div>
+        </div>
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <div class="line"></div>
+
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <div class="line"></div>
+
+        <h3>Lorem Ipsum Dolor</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    </div>
+    <!-- end Content-->
+</div>
+
+
+</div></div>
+<footer id="bottom-bar" class="bg_color_light_brown2">
+    <div class="row info-contact">
+        <div class="col-8 u-pl-16">
+        <div class="u-mt-8" >© 大智山玄空法寺. 台南巿楠西區中華路270號. 電話：06-5751455 傳真：06-5755935 </div>
+        <div class="u-mt-8" >© 朝陽慈善功德會. 台南巿佳里區長安街78之2號4樓之3. 電話：06-7229290 傳真：06-7212222</div>
+        </div>
+        <div class="col-4">
+<img src="resources/img/facebook_trans.png" class="u-ml-8">
+<img src="resources/img/line_trans.png" class="u-ml-8">
+        </div>
+</div>
+</footer>
+</div>
+    <!--=================================================================================-->
+    
+  </body>
+  <script>
+      $(document).ready(function(){
+        $('#marquee').marquee({isScroll:true});
+        $("#marquee_up_btn").click(function(){
+            $('#marquee').marquee("prev");
+        });
+        $("#marquee_dn_btn").click(function(){
+            $('#marquee').marquee("next");
+        });
+
+        $('.menu-content').width($('.intro-container').height()*960/1029);
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+            $(this).toggleClass('active');
+        });
+      });
+  </script>
+</html>
