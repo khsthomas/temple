@@ -19,99 +19,65 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
+<style>
+    /*@media (max-width: 768px)*/
+</style>
 </head>
 
 <body>
         <div id="page-wrapper">
-                <!--top logo menu-->
-                <div id="top-bar" class="row bg_color_white"><div class="container">
-                    <!--登入前 class="row bg_color_black"-->
-                    <div class="row">
-                        <div class="col-4 u-pl-0">
-                          <div class="logo"></div>
-                        </div>
-                        <div class="col-8">
-                        <nav th:if="${player==null}" class="navbar row bg_color_white color_black_grey2 u-mt-24">
-                          <ul class="ul_nav">
-                              <li class="li_nav">
-                                  <a href="#">首頁</a></li>
-                              <li class="li_nav">
-                                  <a class="nav_now dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                                      全真上人</a>
-                                  <ul class="dropdown-menu"  role="menu">
-                                      <li><a href="javascript:void(0)">全真上人德相</a></li>
-                                      <li><a href="javascript:void(0)">全真上人略傳</a></li>
-                                      <li><a href="javascript:void(0)">偈語選粹</a></li>
-                                  </ul>
-                              </li>
-                              <li class="li_nav">
-                                  <a href="#">玄空法寺</a></li>
-                              <li class="li_nav">
-                                  <a href="#">最新活動</a></li>
-                              <li class="li_nav">
-                                  <a href="#">聯絡我們</a></li>
-                          </ul>
-                          </nav>
-                        </div>
-                        <!--
-                        <div class="col-6 offset-6">
-                            <div class="row">
-                                <div class="col-4 offset-2 top_header_padding">
-                                    <input type="text" class=" top_input" placeholder="請輸入帳號">
-                                </div>
-                                <div class="col-4 top_header_padding">
-                                    <input type="password" class="top_input" placeholder="請輸入密碼">
-                                </div>
-                                <div class="col-2 top_header_padding btn_logIn_margin">
-                                    <a href="#" class="button btn_logIn">登入</a>
-                                </div> 
-                            </div>    
-                        </div>  
-                        -->  
-                    </div>
-                   
-                </div></div>
+            <div id="toplink" >
+                <ul  class="nav justify-content-end container nav-pills">
+
+<li class="nav-item"><a class="nav-link" href="/joomla3811/index.php/main"  >首頁</a></li><li class="nav-item"><a class="nav-link" href="/joomla3811/index.php/latestnews"  >最新活動</a></li><li class="nav-item"><a class="nav-link" href="/joomla3811/index.php/trans-accommodation"  >交通食宿</a></li><li class="nav-item"><a class="nav-link" href="/joomla3811/index.php/contacts"  >聯絡我們</a></li><li class="nav-item"><a href="/joomla3811/index.php/work-photo" class="nav-link">數位影音</a></li></ul>
+
+</div>
+<!--top logo menu-->
+<header id="top-bar" class="row bg_color_white">
+<div class="container">
+    <!--登入前 class="row bg_color_black"-->
+    <div class="row">
+
+        <div class="col-4 u-pl-0">
+            <a  href="http://localhost/joomla3811/main">
+            <div class="logo"></div>
+            </a>
+        </div>
+        <div class="col-8">
+
+<!--                        jdoc:include type="module" name="mod_menu" title="Main Menu B4"-->
+            <nav class="navbar navbar-expand navbar-toggleable-xl navbar-expand-lg navbar-light row bg_color_white color_black_grey2 u-mt-16" id="mainmenu">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse bg_color_white" id="navbarSupportedContent">
+<ul class="ul_nav navbar-nav mr-auto">
+<li class="li_nav item-102"><a class="nav-link" href="/joomla3811/index.php/mastero"  > 全真上人 </a></li><li class="li_nav item-103 deeper parent dropdown"><a class="nav-link dropdown-toggle" href="/joomla3811/index.php/dzs-temple"  data-toggle="dropdown" >玄空法寺</a><ul class="nav-child unstyled dropdown-menu mt-0"><li class="li_nav item-107"><a class="dropdown-item" href="/joomla3811/index.php/dzs-temple/view-guide"  >景觀引導</a></li><li class="li_nav item-203"><a class="dropdown-item" href="/joomla3811/index.php/dzs-temple/originalofdzs"  >玄空法寺之緣由</a></li><li class="li_nav item-204"><a class="dropdown-item" href="/joomla3811/index.php/dzs-temple/principle"  >玄空法寺之宗旨</a></li><li class="li_nav item-205"><a class="dropdown-item" href="/joomla3811/index.php/dzs-temple/explain-of-dzs"  >玄空法寺釋義</a></li><li class="li_nav item-206"><a class="dropdown-item" href="/joomla3811/index.php/dzs-temple/kingmen-temple"  >金門玄空寺</a></li><li class="li_nav item-207"><a class="dropdown-item" href="/joomla3811/index.php/dzs-temple/tainan-temple"  >台南玄空寺</a></li><li class="li_nav item-208"><a class="dropdown-item" href="/joomla3811/index.php/dzs-temple/huwei-temple"  >虎尾玄空寺</a></li><li class="li_nav item-209"><a class="dropdown-item" href="/joomla3811/index.php/dzs-temple/donate-item"  >待捐建設及項目</a></li></ul></li><li class="li_nav item-117"><a class="nav-link" href="/joomla3811/index.php/buddhist-hymn"  >無聲覺起</a></li><li class="li_nav item-118 current active"><a class="active nav-link" href="/joomla3811/index.php/reasonrange"  >玄空法界</a></li><li class="li_nav item-119"><a class="nav-link" href="/joomla3811/index.php/jhoyang-charity"  >朝陽慈善</a></li><li class="li_nav item-131"><a class="nav-link" href="/joomla3811/index.php/journal-article"  >朝陽慈空</a></li><li class="li_nav item-120 deeper parent dropdown"><a class="nav-link dropdown-toggle" href="/joomla3811/index.php/volunteer"  data-toggle="dropdown" >菩薩護法</a><ul class="nav-child unstyled dropdown-menu mt-0"><li class="li_nav item-256"><a class="dropdown-item" href="/joomla3811/index.php/volunteer/wisdin-youngth"  >智慧青年</a></li></ul></li>    </ul>
+</div>
+</nav>
+
+
+        </div>
+
+    </div>
+
+</div>
+</header>
 
                 <div id="content" class="content"><div class="container">
                  
-                  <header>
-                  <div id="adCarousel" class="carousel" data-ride="carousel">
-                      <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#adCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#adCarousel" data-slide-to="1"></li>
-                        <li data-target="#adCarousel" data-slide-to="2"></li>
-                    </ol>
-                      <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="resources/img/slider/fullimage1.png" alt="Gate">
-                          </div>
-                    </div>
-                    <!-- Left and right controls -->
-                    <!-- Left and right controls -->
-                    <a class="carousel-control-prev" href="#adCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#adCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    
-                  </div>
-              </header>
+                 
               <nav aria-label="breadcrumb" class="bc-nav-container">
                     <button type="button" id="sidebarCollapse" class="btn btn-default">
                             <i class="fas fa-align-left"></i>
                             
                         </button>
-                        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" 
+                        <!--<button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" 
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
                         aria-expanded="false" aria-label="Toggle navigation">
                             <i class="fas fa-align-justify"></i>
-                        </button>
+                        </button>-->
     
                     <ol class="breadcrumb">
                             
@@ -246,7 +212,14 @@
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
+                $('#sidebar').show();
+                //console.log(this);
                 $(this).toggleClass('active');
+                /* if($(this).hasClass('active')){
+                    $('#sidebar').removeClass('active');
+                }else{
+                    $('#sidebar').addClass('active');
+                } */
             });
         });
     </script>

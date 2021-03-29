@@ -38,3 +38,14 @@
     transform:translateY(-50%);
   }
 }
+
+/*top-link nav */
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #796e53a1;
+}
+/*調整寬度*/
+@media (min-width: 992px){
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0 !important;
+    padding-left: .6rem;
+  }}

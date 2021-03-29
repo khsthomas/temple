@@ -15,11 +15,12 @@ html, body {
   width: 100%;
   height: 100%;
   font-family: PingFangTC-Regular, "Arial", "Microsoft JhengHei", sans-serif;
-
-  .container {
-    width: $pageWidth;
-  }
+ 
 }
+/*.container {
+  width: $pageWidth;
+}*/
+
 /*
 .container { width: 100%; }
 
@@ -33,12 +34,7 @@ aside[role="complementary"] {
   width: 300px / 960px * 100%;
 }
 */
-#toplink{
-  background-color: $color_light_brown2;
-  a{
-    color: #CCCCCC !important;
-  }
-}
+
 body {
   background   : url(images/bg.png),
   linear-gradient(to bottom, rgb(250, 249, 247),  rgb(250, 249, 247));
@@ -59,6 +55,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  // min-width: $pageWidth;
   /*height: 100%;*/
   min-height: 100vh;
   padding:0;
@@ -75,17 +72,24 @@ body {
   margin: 0;
   // @include width100-margin0();
 }
+
+#toplink{
+  background-color: $color_light_brown2;
+  a{
+    color: #CCCCCC !important;
+  }
+}
 #top-bar{
-  height:62px;
   flex-shrink: 0;
   @include width100-margin0();
 
   .logo{
     margin-top: 0;
     width:100%;
-    height: 56px;
-    background   : url(images/logo.png);
-    background-repeat  : no-repeat;
+    height: 48px;
+    background: no-repeat center/80% url(images/logo.png);
+    /*background   : url(images/logo.png) 100% 36%;
+      background-repeat  : no-repeat;*/
     // background-size: 100%;
   }
 }
@@ -101,7 +105,7 @@ body {
   text-align: left;
   .info-contact{
     position: relative;
-    width: $pageWidth;
+    // width: $pageWidth;
     top:50%;
     left: 50%;
     transform:translate(-50%, -50%);
@@ -136,3 +140,98 @@ nav, .row{
   display:none;
   z-index:999;
 }
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+// Small devices (landscape phones, 576px and up)
+@media only screen 
+and (min-device-width: 320px) and (max-width: 768px) { 
+  .info-contact,.container {
+    width: 100%;
+  }
+  #logo-div {
+     display: none;
+  }
+  #top-bar{
+    height: auto;
+  }
+  .navbar {
+    height: auto;
+    margin-top: auto;
+    padding: 0;
+  }
+  .top-bar-row{
+    background:$color_white;
+  }
+  #toplink .nav-link{
+    padding: .5rem .3rem !important;
+  }
+  #navbarSupportedContent .navbar-nav {
+      display: inline !important;
+  }
+  #navbarSupportedContent .nav-link{
+      padding-right: 0 !important;
+  }
+  #navbarSupportedContent .navbar ul li a {
+      padding: .4rem .2rem;
+  }  
+}
+
+// Medium devices (tablets, 768px and up)
+@media only screen 
+and (min-width: 768px) and (max-width: 992px){ 
+  .info-contact,.container {
+    width: 100%;
+  }
+  #logo-div {
+    display: none;
+  }
+  #top-bar{
+    height: auto;
+  } 
+  .navbar {
+    height: auto;
+    margin-top: auto;
+    padding: 0;
+  } 
+  .top-bar-row{
+    background:$color_white;
+  }
+  #toplink .nav-link{
+    padding: .5rem .3rem !important;
+  }
+  #navbarSupportedContent .navbar-nav {
+      display: inline !important;
+  }
+  #navbarSupportedContent .nav-link{
+      padding-right: 0 !important;
+  }
+  #navbarSupportedContent .navbar ul li a {
+      padding: .4rem .2rem;
+  }  
+}
+
+// Large devices (desktops, 992px and up)
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 992px){  
+  .info-contact,.container {
+    width: $pageWidth;
+  }
+  #top-bar{
+    height:52px;
+  }
+  .navbar{
+    height: 36px;
+    margin-top:16px;
+  }
+}
+/*
+@media (min-width: 1200px){  
+  .info-contact,.container {
+    width: $pageWidth;
+  }
+  .navbar{
+    height: 36px;
+    margin-top:16px;
+  }
+}
+*/
