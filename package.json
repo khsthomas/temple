@@ -15,7 +15,7 @@
     "gulp-less": "^4.0.1",
     "less": "^3.9.0",
     "metismenu": "^3.0.4",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "npm": "^6.9.0",
     "postcss-loader": "^2.1.6",
     "sass-loader": "^6.0.6",
